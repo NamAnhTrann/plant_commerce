@@ -15,7 +15,11 @@ const verifyFirebaseToken = require("./router/verifyTokenRouter");
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ["http://localhost:4200"];
+const allowedOrigins = [
+  "http://localhost:4200",
+  "https://bloombox-ukg3s9vm1-namanhtranns-projects.vercel.app",
+  "https://bloombox-ukg3s9vm1-namanhtranns-projects.vercel.app/#/",
+];
 
 app.use(
   cors({
