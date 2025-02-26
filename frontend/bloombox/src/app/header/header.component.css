@@ -1,0 +1,27 @@
+.custom-nav a{
+  color:rgb(230, 230, 230);
+  font-size:20px !important;
+  transition: transform 0.3s ease-in-out;
+
+}
+.custom-nav a:hover {
+  color: white;
+  transform: translateY(-5px);
+}
+
+.custom-nav.mobile-menu-btn:hover {
+  background-color: #d1d5db;
+}
+
+.custom-btn a{
+  width: 220px; /* Adjust to your needs */
+  max-width: 100%; /* Ensures responsiveness */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.custom-btn a:hover{
+  transform: scale(1.05);
+}
+.firm-name{
+  font-size:20px;
+  font-weight: bolder;
+}

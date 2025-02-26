@@ -1,0 +1,60 @@
+<section class="product-list pt-24 pb-12 mx-auto max-w-screen-xl px-4 sm:px-6 sm:py-12 lg:px-8">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Explore Our Plant Collection</h2>
+
+      <p class="mt-4 max-w-md text-gray-500">
+        Explore a curated selection of vibrant plants, from air-purifying greens to elegant statement pieces, perfect for any space.      </p>
+
+    </header>
+
+
+
+      <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
+        @for (products of product; track $index) {
+          <li class="relative block overflow-hidden rounded">
+            <img
+              src="{{products.productImage}}"
+              alt="{{products.productImage}}"
+              class="h-64 w-full object-cover transition duration-500 hover:scale-105 sm:h-72"
+            />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+              <h3 class="mt-4 text-lg font-medium text-gray-900">{{products.productName}}</h3>
+              <p class="mt-1.5 text-sm text-gray-700">${{products.productPrice}}</p>
+
+              <form class="mt-4">
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <!-- Wrap only this button in a group to isolate the hover effect -->
+                  <div class="group flex-1">
+                    <button
+                      (click)="addToCart(products._id, cart.quantity)"
+                      class="relative w-full text-xs font-medium text-white focus:ring-3 focus:outline-hidden cursor-pointer"
+                    >
+                      <span class="absolute inset-0 border border-[#83A683]"></span>
+                      <span
+                        class="block border border-[#83A683] bg-[#83A683] px-3 py-2 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+                      >
+                        Add to Cart
+                      </span>
+                    </button>
+                  </div>
+
+                  <!-- View Product Button (No Unwanted Hover Effect) -->
+                  <button
+                    (click)="viewProduct(products._id)"
+                    class="flex-1 rounded-sm bg-[#83A683] text-white px-3 py-2 text-xs font-medium transition hover:scale-105"
+                  >
+                    View Product
+                  </button>
+                </div>
+              </form>
+            </div>
+          </li>
+
+    }
+  </ul>
+
+
+  </div>
+</section>

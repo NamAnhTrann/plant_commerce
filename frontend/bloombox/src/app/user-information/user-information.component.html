@@ -1,0 +1,88 @@
+<section class="mt-44 mb-12">
+  <div class="text-center mb-8 mt-4">
+    <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">
+      Here with Us for the First Time? Or want to update your details?
+    </h1>
+    <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">
+      Let us get to know you for easier contact! <br class="hidden sm:block">
+    </p>
+  </div>
+
+  <form class="max-w-md mx-auto" (submit)="submitFormButton()">
+    <!-- First Name -->
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" [(ngModel)]="user.userFirstName" name="userFirstName" id="userFirstName" required
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+        <label for="userFirstName" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First Name</label>
+    </div>
+
+    <!-- Last Name -->
+    <div class="relative z-0 w-full mb-5 group">
+      <input type="text" [(ngModel)]="user.userLastName" name="userLastName" id="userLastName" required
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+      <label for="userLastName" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last Name</label>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="tel" [(ngModel)]="user.userPhoneNumber" name="userPhoneNumber" id="userPhoneNumber" required
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+        <label for="userPhoneNumber" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone Number</label>
+    </div>
+
+    <!-- Address Fields -->
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <!-- Street -->
+       @if(user.userLocation){
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" [(ngModel)]="user.userLocation.locationStreet" name="locationStreet" id="locationStreet" required
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+          <label for="locationStreet" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Street</label>
+      </div>
+
+       }
+       @if(user.userLocation){
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" [(ngModel)]="user.userLocation.locationCity" name="locationCity" id="locationCity" required
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+          <label for="locationCity" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">City</label>
+      </div>
+       }
+      <!-- City -->
+
+    </div>
+
+    <!-- State, Country, Postcode -->
+    <div class="grid md:grid-cols-3 md:gap-6">
+      @if(user.userLocation){
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" [(ngModel)]="user.userLocation.locationState" name="locationState" id="locationState" required
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+          <label for="locationState" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">State</label>
+      </div>
+      }
+
+      @if(user.userLocation){
+        <div class="relative z-0 w-full mb-5 group">
+          <input type="text" [(ngModel)]="user.userLocation.locationCountry" name="locationCountry" id="locationCountry" required
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+          <label for="locationCountry" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Country</label>
+      </div>
+
+      }
+
+    </div>
+
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </form>
+</section>
+
+
+
+
+
+
+
+
+
+

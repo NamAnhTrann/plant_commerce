@@ -1,0 +1,154 @@
+[
+  {
+    "productName": "Snake Plant",
+    "productDescription": "A hardy indoor plant that purifies air.",
+    "productPrice": 15.99,
+    "productQuantity": 30,
+    "productCategory": "small",
+    "productImage": "product_images/597A9848.jpg"
+  },
+  {
+    "productName": "Golden Snake Plant",
+    "productDescription": "A unique variant of the snake plant with golden edges.",
+    "productPrice": 18.99,
+    "productQuantity": 25,
+    "productCategory": "small",
+    "productImage": "product_images/597A9849.jpg"
+  },
+  {
+    "productName": "Black Rubber Plant",
+    "productDescription": "A stylish indoor plant with deep green leaves.",
+    "productPrice": 22.50,
+    "productQuantity": 20,
+    "productCategory": "large",
+    "productImage": "product_images/597A9851.jpg"
+  },
+  {
+    "productName": "Alocasia Polly",
+    "productDescription": "A striking plant with dark leaves and white veins.",
+    "productPrice": 25.99,
+    "productQuantity": 15,
+    "productCategory": "small",
+    "productImage": "product_images/597A9852.jpg"
+  },
+  {
+    "productName": "Bonsai Tree",
+    "productDescription": "A meticulously cultivated miniature tree.",
+    "productPrice": 45.00,
+    "productQuantity": 10,
+    "productCategory": "collection",
+    "productImage": "product_images/597A9853.jpg"
+  },
+  {
+    "productName": "Ficus Bonsai",
+    "productDescription": "An elegant bonsai with a strong trunk and rich green leaves.",
+    "productPrice": 50.00,
+    "productQuantity": 8,
+    "productCategory": "collection",
+    "productImage": "product_images/597A9854.jpg"
+  },
+  {
+    "productName": "Pothos",
+    "productDescription": "A low-maintenance plant perfect for home decoration.",
+    "productPrice": 12.99,
+    "productQuantity": 50,
+    "productCategory": "small",
+    "productImage": "product_images/597A9855.jpg"
+  },
+  {
+    "productName": "Areca Palm",
+    "productDescription": "A large plant that brings a tropical feel indoors.",
+    "productPrice": 35.99,
+    "productQuantity": 18,
+    "productCategory": "large",
+    "productImage": "product_images/597A9856.jpg"
+  },
+  {
+    "productName": "Fiddle Leaf Fig",
+    "productDescription": "A stylish, broad-leafed plant for modern homes.",
+    "productPrice": 55.00,
+    "productQuantity": 12,
+    "productCategory": "large",
+    "productImage": "product_images/597A9857.jpg"
+  },
+  {
+    "productName": "Neon Pothos",
+    "productDescription": "A vibrant neon-green variant of the classic pothos.",
+    "productPrice": 16.99,
+    "productQuantity": 40,
+    "productCategory": "small",
+    "productImage": "product_images/597A9858.jpg"
+  },
+  {
+    "productName": "Jade Plant",
+    "productDescription": "A succulent that symbolizes good luck and prosperity.",
+    "productPrice": 19.99,
+    "productQuantity": 35,
+    "productCategory": "small",
+    "productImage": "product_images/597A9861.jpg"
+  },
+  {
+    "productName": "Boxwood Shrub",
+    "productDescription": "A small shrub that works great for shaping and trimming.",
+    "productPrice": 28.99,
+    "productQuantity": 15,
+    "productCategory": "collection",
+    "productImage": "product_images/597A9862.jpg"
+  },
+  {
+    "productName": "Zanzibar Gem",
+    "productDescription": "A tough, drought-resistant plant perfect for beginners.",
+    "productPrice": 24.99,
+    "productQuantity": 20,
+    "productCategory": "large",
+    "productImage": "product_images/597A9863.jpg"
+  },
+  {
+    "productName": "Lemon Balm Plant",
+    "productDescription": "A fragrant herb that promotes relaxation.",
+    "productPrice": 14.50,
+    "productQuantity": 30,
+    "productCategory": "small",
+    "productImage": "product_images/597A9864.jpg"
+  },
+  {
+    "productName": "Peperomia Plant",
+    "productDescription": "A compact plant with thick, glossy leaves.",
+    "productPrice": 18.99,
+    "productQuantity": 28,
+    "productCategory": "small",
+    "productImage": "product_images/597A9865.jpg"
+  },
+  {
+    "productName": "Hoya Carnosa",
+    "productDescription": "A waxy-leaved plant that produces stunning flowers.",
+    "productPrice": 26.99,
+    "productQuantity": 14,
+    "productCategory": "collection",
+    "productImage": "product_images/597A9866.jpg"
+  },
+  {
+    "productName": "Peace Lily",
+    "productDescription": "A classic houseplant with beautiful white flowers.",
+    "productPrice": 21.99,
+    "productQuantity": 22,
+    "productCategory": "small",
+    "productImage": "product_images/597A9871.jpg"
+  },
+  {
+    "productName": "Spider Plant",
+    "productDescription": "A resilient plant with long, arching leaves.",
+    "productPrice": 14.99,
+    "productQuantity": 35,
+    "productCategory": "small",
+    "productImage": "product_images/597A9872.jpg"
+  },
+  {
+    "productName": "Anthurium Red",
+    "productDescription": "A stunning plant with vibrant red flowers.",
+    "productPrice": 29.99,
+    "productQuantity": 12,
+    "productCategory": "collection",
+    "productImage": "product_images/597A9878.jpg"
+  }
+]

@@ -1,0 +1,89 @@
+<div class="font-sans tracking-wide max-w-7xl mx-auto mt-36 p-8 sm:p-10 lg:p-12">
+  <div class="bg-white md:min-h-[600px] grid items-start grid-cols-1 md:grid-cols-2 gap-8">
+
+    @for (products of product; track $index) {
+    <div class="h-full">
+      <div class="p-4 relative h-full flex items-center justify-center">
+        <img src="{{products.productImage}}" />
+      </div>
+    </div>
+      <div class="bg-[#83A683] py-6 px-8 h-full">
+        <div>
+          <h2 class="sm:text-3xl text-2xl font-semibold text-white">{{products.productName}}</h2>
+          <p class="text-sm text-white mt-2">Well-Versed Commerce</p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 justify-between mt-8">
+          <h3 class="text-white sm:text-4xl text-3xl">${{products.productPrice}}</h3>
+
+        </div>
+
+        <div>
+          <ul class="grid grid-cols-3 mt-8">
+            <li
+              class="text-white text-base w-full py-3.5 px-2 text-center border-b-2 border-white cursor-pointer">
+              Description
+            </li>
+            <li
+              class="text-gray-300 text-base w-full py-3.5 px-2 text-center border-b-2 border-gray-400 cursor-pointer">
+              Details
+            </li>
+            <li
+              class="text-gray-300 text-base w-full py-3.5 px-2 text-center border-b-2 border-gray-400 cursor-pointer">
+              Reviews
+            </li>
+          </ul>
+          <p class="text-white mt-4 text-base">{{products.productDescription}}</p>
+        </div>
+
+        <div class="mt-8">
+          <h3 class="text-lg text-white">Quantity</h3>
+
+          <div class="flex mt-4 rounded-full overflow-hidden bg-black py-2.5 px-4 w-32">
+            <!-- Decrease Quantity Button -->
+            <button type="button" class="bg-transparent w-8 text-white font-semibold flex items-center justify-center"
+              (click)="decreaseQuantity()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 fill-current inline" viewBox="0 0 124 124">
+                <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z"></path>
+              </svg>
+            </button>
+
+            <!-- Input for Quantity -->
+            <input type="number" [(ngModel)]="cart.quantity"
+            class="bg-transparent w-12 px-4 py-2 text-center font-semibold text-white text-base outline-none"
+            min="1" inputmode="numeric"/>
+
+            <!-- Increase Quantity Button -->
+            <button type="button" class="bg-transparent w-8 text-white font-semibold flex items-center justify-center"
+              (click)="increaseQuantity()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 fill-current inline" viewBox="0 0 42 42">
+                <path d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex gap-4 mt-8 ">
+          <!-- Buy Now Button with Hover Effect -->
+          <button
+            (click)="addToCart(products._id, cart.quantity)"
+            type="button"
+            class="group relative w-full max-w-[200px] text-base font-medium text-black focus:ring-3 focus:outline-hidden cursor-pointer rounded"
+          >
+            <span class="absolute inset-0 border border-black rounded"></span>
+            <span
+              class="block border border-black bg-white px-4 py-2.5 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:bg-black group-hover:text-white rounded"
+            >
+              Buy now
+            </span>
+          </button>
+        </div>
+
+        </div>
+
+    }
+
+
+      </div>
+
+</div>
