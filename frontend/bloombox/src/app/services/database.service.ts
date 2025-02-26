@@ -15,7 +15,7 @@ const httpOptions = {
 })
 export class DatabaseService {
 
-  private localUrl = "http://localhost:3030"
+  private localUrl = "https://plant-commerce.onrender.com"
 
   constructor(private http:HttpClient, private router:Router) { }
 

@@ -8,7 +8,7 @@ import app from "../firebaseConfig"; // Import from firebaseConfig
   providedIn: 'root'
 })
 export class AuthService {
-  private localUrl = "http://localhost:3030";
+  private localUrl = "https://plant-commerce.onrender.com";
   private redirectUrl: string = '/';
 
   auth = getAuth(app);
