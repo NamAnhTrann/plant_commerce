@@ -20,6 +20,7 @@ const allowedOrigins = [
   "https://bloombox-ukg3s9vm1-namanhtranns-projects.vercel.app",
   "https://bloombox-ukg3s9vm1-namanhtranns-projects.vercel.app/#/",
   "https://bloombox-three.vercel.app/#/",
+  "https://bloombox-three.vercel.app",
 ];
 
 app.use(
