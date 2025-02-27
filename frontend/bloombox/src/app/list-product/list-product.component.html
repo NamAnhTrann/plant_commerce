@@ -25,7 +25,7 @@
 
               <form class="mt-4">
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <!-- Wrap only this button in a group to isolate the hover effect -->
+                  <!-- Add to Cart Button -->
                   <div class="group flex-1">
                     <button
                       (click)="addToCart(products._id, cart.quantity)"
@@ -40,14 +40,22 @@
                     </button>
                   </div>
 
-                  <!-- View Product Button (No Unwanted Hover Effect) -->
-                  <button
-                    (click)="viewProduct(products._id)"
-                    class="flex-1 rounded-sm bg-[#83A683] text-white px-3 py-2 text-xs font-medium transition hover:scale-105"
-                  >
-                    View Product
-                  </button>
+                  <!-- View Product Button (Now with the same hover effect) -->
+                  <div class="group flex-1">
+                    <button
+                      (click)="viewProduct(products._id)"
+                      class="relative w-full text-xs font-medium text-white focus:ring-3 focus:outline-hidden cursor-pointer"
+                    >
+                      <span class="absolute inset-0 border border-[#83A683]"></span>
+                      <span
+                        class="block border border-[#83A683] bg-[#83A683] px-3 py-2 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+                      >
+                        View Product
+                      </span>
+                    </button>
+                  </div>
                 </div>
+
               </form>
             </div>
           </li>

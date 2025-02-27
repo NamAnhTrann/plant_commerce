@@ -37,6 +37,17 @@ export class ViewProductComponent {
 
   constructor(private db: DatabaseService, private router: Router, private route:ActivatedRoute){}
 
+
+  listProduct() {
+    this.route.paramMap.subscribe(params => {
+      const productId = params.get('id');
+      this.db.getAllProduct().subscribe((data: any) => {
+        this.product = data.filter((item: any) => item.id !== productId);
+      });
+    });
+  }
+
+
   getProductId(productId:string){
     this.db.getProductId(productId).subscribe((data:any)=>{
       this.product = data;
