@@ -38,7 +38,11 @@
           <i class="fas fa-shopping-cart text-lg mr-2"></i>
           <span>Cart</span>
         </a>
-      }
+      } @else {
+        <a routerLink="list-product" class="text-sm font-semibold text-white flex items-center hover:underline">
+          No Cart Yet! Please add an Item
+        </a>
+              }
     </div>
   </nav>
    @if(mobileMenuOpen){
@@ -70,7 +74,7 @@
                   <span>Cart</span>
                 </a>
               } @else {
-                <p>No Cart</p>
+                <a routerLink="list-product" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">No Cart Yet!, Please add an Item</a>
 
               }
             </div>
