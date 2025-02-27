@@ -23,6 +23,5 @@ export const routes: Routes = [
   {path: 'user-information/:id', component:UserInformationComponent},
   {path: 'order-summary', component:OrderSummaryComponent},
   {path: 'plant-library', component:PlantLibraryComponent},
-
-  // { path: '**', redirectTo: 'error-page' }
+  { path: '**', redirectTo: 'error-page' }
 ];
