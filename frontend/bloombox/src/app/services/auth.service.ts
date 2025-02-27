@@ -89,7 +89,7 @@ export class AuthService {
     onAuthStateChanged(this.auth, (user) => {
       this.currentUser = user;
       if (user) {
-        console.log("User session restored:", user);
+        console.log("user restored, and if you read this and tryna get the credential, you can go fuck yourself");
       } else {
         console.warn("You are not authenticated.");
       }

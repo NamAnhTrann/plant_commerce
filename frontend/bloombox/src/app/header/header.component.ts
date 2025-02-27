@@ -34,10 +34,6 @@ cart: Cart = new Cart();
  ngOnInit() {
   this.auth.getUserAsync().then(user=>{
     if (user) {
-      console.log("User is authenticated:", user);
-      console.log("User ID:", user.uid);
-      console.log("User Email:", user.email);
-
       this.db.listCartItem(user.uid).then((res) => {
         res?.subscribe((res: any) => {
           if (res?.cart?._id) {

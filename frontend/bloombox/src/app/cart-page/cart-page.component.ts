@@ -40,9 +40,6 @@ export class CartPageComponent {
     auth.onAuthStateChanged((user) => {
       if (user && this.cartId) {
         this.userId = user.uid;
-        console.log("User is authenticated:", user);
-        console.log("User ID:", user.uid);
-        console.log("User Email:", user.email);
         this.listCartId(this.cartId);
         this.listOrder(this.userId)
       } else {

@@ -27,7 +27,6 @@ export class ListProductComponent {
 
     const auth = getAuth();
     auth.onAuthStateChanged((user)=>{
-      console.log(`user is authenticated ${user}`)
     })
     this.listProduct()
   }
