@@ -83,13 +83,6 @@ module.exports = {
         console.log("User not available");
         return res.status(400).json({ message: "user is not available" });
       }
-      let userLocation = await userLocation
-        .findOne({ userLocation: userId })
-        .populate("userLocation");
-
-      if (!userLocation) {
-        console.log("there is no user location initialised");
-      }
 
       const isProfileComplete =
         user.userFirstName !== "none" &&
