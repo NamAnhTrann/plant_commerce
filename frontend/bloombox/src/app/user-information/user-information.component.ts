@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../model/userModel';
 import { Location } from '../model/locationModel';
 import { getAuth } from '@firebase/auth';
+import {Location as AngularLocation} from '@angular/common'
 
 
 @Component({
@@ -18,7 +19,7 @@ import { getAuth } from '@firebase/auth';
 export class UserInformationComponent {
   user: User = {} as User;
   userId: string = '';
-  constructor(private db:DatabaseService, private route:ActivatedRoute, private router:Router){}
+  constructor(private db:DatabaseService, private route:ActivatedRoute, private router:Router,  private location: AngularLocation){}
 
   ngOnInit(){
     const auth = getAuth();
@@ -48,7 +49,9 @@ export class UserInformationComponent {
     this.db.updateUser(this.userId, this.user).then((res:any)=>{
       res?.subscribe((res:any)=>{
         console.log(res)
-        this.router.navigate(["/list-product"])
+        // this.router.navigate(["/list-product"])
+        this.location.back()
+
         })
 
     })
